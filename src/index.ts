@@ -90,7 +90,6 @@ let running = false;
 
 setInterval(() => {
     if (running) {
-        // skip this tick if previous run still executing
         return;
     }
     running = true;
