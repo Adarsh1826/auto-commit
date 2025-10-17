@@ -14,7 +14,7 @@ const dynamicFileChanging = async () => {
         fs.promises.writeFile("text.txt", `${res}`,"utf-8")
         return res
     } catch (error) {
-        console.log("chuxd gye guru");
+        
         throw error;
     }
 }
@@ -34,14 +34,14 @@ async function runSingleCommand(cmd: string) {
         // collect stdout chunks
         child.stdout?.on("data", (data) => {
             const s = data.toString();
-            console.log("OUTPUT:", s);
+            //console.log("OUTPUT:", s);
             stdoutChunks.push(s);
         });
 
         // collect stderr chunks
         child.stderr?.on("data", (data) => {
             const s = data.toString();
-            console.error("ERROR:", s);
+            //console.error("ERROR:", s);
             stderrChunks.push(s);
         });
 
@@ -64,16 +64,16 @@ async function call() {
     try {
         for(let i=0;i<commands.length;i++){
             const res = await runSingleCommand(commands[i])
-            console.log(res);
+            //console.log(res);
             
             if(!res){
                 // 
-                console.log("Something breaks");
+                //console.log("Something breaks");
                 return
             }
         }
     } catch (error) {
-        console.log(error);
+        //console.log(error);
         
     }
     
@@ -98,7 +98,7 @@ setInterval(() => {
         try {
             await test();
         } catch (e) {
-            console.error("Run failed:", e);
+            //console.error("Run failed:", e);
         } finally {
             running = false;
         }
