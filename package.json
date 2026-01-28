@@ -4,14 +4,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"nodemon dist/index.js",
-    "build":"tsc -b"
+    "dev": "nodemon dist/index.js",
+    "build": "tsc -b"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@types/node": "^24.8.0"
+    "@types/node": "^24.8.0",
+    "typescript": "^5.9.3"
   }
 }
