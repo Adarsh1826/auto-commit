@@ -64,7 +64,7 @@ async function call() {
     try {
         for(let i=0;i<commands.length;i++){
             const res = await runSingleCommand(commands[i])
-            //console.log(res);
+           
             
             if(!res){
                 // 
@@ -97,6 +97,8 @@ setInterval(() => {
     (async () => {
         try {
             await test();
+            console.log("runnig");
+            
         } catch (e) {
             //console.error("Run failed:", e);
         } finally {
